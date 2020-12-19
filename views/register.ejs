@@ -1,0 +1,21 @@
+<%- include("partials/header.ejs");%>
+
+<div class="container" style="text-align:center;">
+    <h1 class ="auth-heading"> Sign Up! </h1>
+    <div class="row">
+        <div style="width:50%; margin:30px auto;">
+            <form action="/register" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" placeholder="username" name = "username" required>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="password" placeholder="password" name="password" required>
+                </div>
+                    <br>
+                    <input class="btn-lg btn-primary btn-block"type="Submit">
+            </form>
+        </div>
+    </div> 
+    <a href="/campgrounds"> Click Me to go back </a>
+</div>	
+<%- include("partials/footer.ejs")%>

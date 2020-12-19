@@ -1,0 +1,22 @@
+<!doctype>
+<!DOCTYPE html>
+<%- include("../partials/header.ejs") %>
+<link rel=stylesheet href="../temp.css">
+<div class="container" style="text-align:center;">
+    <h3> Add a new Comment to <%=campground.name%></h3>
+    <div class="row"> 
+        <div style="width:50%; margin:30px auto;">
+            <form action="/campgrounds/<%=campground._id%>/comments" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="comment[text]" placeholder="comment text" reduired>
+                </div>
+                    <br>
+                    <input class="btn-lg btn-primary btn-block"type="Submit">
+                    <br>
+                    <a class="btn btn-danger btn-block" href="/campgrounds/<%=campground._id%>"> Click Me to go back </a>
+            </form>
+        </div>
+    </div>
+</div>	
+
+<%- include("../partials/footer.ejs") %> 

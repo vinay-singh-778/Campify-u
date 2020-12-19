@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title> Camp!fy </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+        <link rel=stylesheet href="../stylesheets/main.css">
+    </head>
+    <body class="blackBG">
+        <nav class="common-navbar">
+            <div class="navbar-brand">
+                <a class="" href="/"> Camp!fy</a>
+            </div>
+            <div class="navbar-items">
+                <% if(!currentUser){%>
+                <a class="auth-btn" href="/register">Signup </a>
+                <a class="auth-btn" href="/login">Login </a>
+                <% }else{ %>
+                <p id="person-signed-in">Signed in as <br><%= currentUser.username%><p>
+                <a class="auth-btn" href="/logout">Logout </a>
+                <%}%>
+            </div>
+        </nav>
+        <div class="container">
+            <%if(error.length > 0){%>            
+                <div class="alert alert-danger">
+                    <center>
+                        <h3><%= error%></h3>
+                    </center>
+                </div>
+            <% }%>
+            <%if(success.length > 0){%>
+                <div class="alert alert-success">
+                    <center>
+                        <h3><%= success%></h3>
+                    </center>
+                </div>
+            <% }%>
+        </div>
+        
