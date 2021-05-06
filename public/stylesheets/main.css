@@ -1,7 +1,6 @@
 .blackBG{
-    background:rgb(35, 193, 255);
+    background:rgb(80, 202, 255);
 }
-    
 a{
     color:rgb(139, 51, 0);
 }
@@ -84,16 +83,20 @@ display: inline;
 }
 /* Index Page Styling */
 .index-container{
-    background:url(https://images.unsplash.com/photo-1487730116645-74489c95b41b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OXx8Y2FtcGluZ3xlbnwwfHwwfA==);
-    min-height: 95vh;
-    width: 98.9vw;
+    background: url(../assets/Index-container-background.jpg);
+    min-height: 100vh;
+    width: 100vw;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    position: relative;
+    /* position: relative; */
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: fixed;
+    top: auto;
 }
 .index-heading{
     margin-top: 20vh;

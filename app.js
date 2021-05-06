@@ -2,7 +2,6 @@ var express              = require("express"),
     app                  = express(),
     bodyParser           = require("body-parser"),
     mongoose             = require("mongoose"),
-    seedDB               = require('./seeds'),
     passport             = require('passport'),
     LocalStrategy        = require('passport-local'),
     expressSession       = require('express-session'),
@@ -127,7 +126,7 @@ app.delete("/campgrounds/:id/comments/:commentId", middleware.checkCommentOwners
 
 
 app.listen(process.env.PORT,process.env.IP
-    //3000,"127.0.0.1"
+    // 3000,"127.0.0.1"
     ,()=>{
-    console.log("yelpCamp has started");
+    console.log("yelpCamp has started - http://127.0.0.1:3000/");
 });
